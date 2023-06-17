@@ -138,7 +138,7 @@ export default function Page() {
   return (
     <main className="flex min-h-screen bg-[#FCE8EC] justify-center w-screen">
       <div className="flex-col max-w-[1200px] items-center">
-        <nav className="h-16 my-8 flex justify-between items-center max-w-[1200px] px-8">
+        <nav className="h-16 my-8 flex justify-between w-full items-center max-w-[1200px] px-8">
           <Image
             src={Logo}
             className="object-contain h-28 w-28 hover:cursor-pointer"
@@ -190,23 +190,23 @@ export default function Page() {
           </div>
         </nav>
         <section className="h-max flex max-md:flex-col w-screen max-w-[1200px]">
-          <div className="flex-col justify-between max-md:text-center items-center h-full mx-8">
-            <h1 className="text-7xl mb-8 text-[#88112B] max-lg:text-4xl max-lg:w-1/2">
+          <div className="flex-col justify-between max-md:text-center items-center h-full mx-8 my-8">
+            <h1 className="text-7xl mb-8 h-full text-[#88112B] max-lg:text-4xl max-md:m-auto">
               Kulinarna
               <span className="text-7xl font-medium italic line-clamp-2 max-lg:text-4xl">
                 magia Japonii
               </span>
               w Twojej dłoni
             </h1>
-            <span className="text-[#2D060E] font-medium text-lg max-md:text-md w-1/3 my-8">
+            <span className="text-[#2D060E] font-medium text-lg max-md:text-md w-auto my-8">
               Odkryj niepowtarzalną kulinarną magię Japoniiw naszej restauracji
               Sushi w Dłoń. Spróbuj naszych mistrzowsko przygotowanych sushi i
               pokebowlów, które przeniosą Cię w magiczny świat smaków.
             </span>
           </div>
-          <div className="hero-image-container flex mr-16 max-w-[1200px]">
+          <div className="hero-image-container flex mr-16 max-w-[1200px] max-md:m-auto max-md:px-8">
             <Image
-              className="hero-image shadow-cyan-500/50 shadow-2xl h-96 rounded-t-2xl min-w-full"
+              className="hero-image shadow-cyan-500/50 shadow-2xl h-96 rounded-t-2xl min-w-full mr-72"
               src={Hero}
             ></Image>
           </div>
@@ -214,7 +214,7 @@ export default function Page() {
         <section className="mt-8 mx-8 rounded-t-[45px] bg-white">
           <div className="max-xl:flex-col flex items-center">
             <Image
-              className="object-cover rounded-b-[45px] w-auto max-md:h-48 h-auto"
+              className="object-cover rounded-b-[45px] h-max"
               src={Exotic_Food}
             ></Image>
             <div className="flex-col text-center flex items-center justify-between">
@@ -222,7 +222,7 @@ export default function Page() {
                 Jedzenie <span className="font-normal">oraz </span> <br></br>
                 koktajle
               </h2>
-              <span className="leading-loose text-[#2D060E] mx-4 text-lg max-lg:w-full">
+              <span className="leading-loose text-[#2D060E] mx-4 text-lg">
                 Odkryj niepowtarzalną kulinarną magię Japonii w naszej
                 restauracji Sushi w Dłoń. Spróbuj naszych mistrzowsko
                 przygotowanych sushi i pokebowlów, które przeniosą Cię w
