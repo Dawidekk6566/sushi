@@ -136,14 +136,14 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="flex w-screen min-h-screen justify-center items-center bg-[#FCE8EC]">
-      <div className="bg-[#FCE8EC]">
-        <nav className="h-16 my-8 flex justify-between items-center">
+    <main className="flex min-h-screen bg-[#FCE8EC] justify-center w-screen">
+      <div className="flex-col max-w-[1200px] items-center">
+        <nav className="h-16 my-8 flex justify-between items-center max-w-[1200px] px-8">
           <Image
             src={Logo}
-            className="ml-24 object-contain h-28 w-28 hover:cursor-pointer"
+            className="object-contain h-28 w-28 hover:cursor-pointer"
           ></Image>
-          <ul className="flex gap-12 mx-24 items-center max-lg:hidden">
+          <ul className="flex gap-12 mr-8 items-center max-lg:hidden">
             <li className="font-bold text-[#330811] text-lg hover:cursor-pointer">
               O nas
             </li>
@@ -156,7 +156,7 @@ export default function Page() {
             <li className="font-bold text-[#330811] text-lg hover:cursor-pointer">
               Kontakt
             </li>
-            <button className="bg-white outline-none py-[10px] px-[48px] font-bold text-[#330811] text-lg">
+            <button className="bg-white outline-none py-[10px] px-[48px] font-bold text-[#330811] shadow-md shadow-black/80 text-lg">
               Zamów
             </button>
           </ul>
@@ -189,55 +189,58 @@ export default function Page() {
             </ul>
           </div>
         </nav>
-        <section className="w-full h-max flex justify-between max-xl:flex-col">
-          <div className="mx-24 flex-col flex max-xl:items-center">
-            <h1 className="text-7xl text-[#88112B] max-lg:text-4xl max-lg:w-1/2 max-lg:text-center">
+        <section className="h-max flex max-md:flex-col w-screen max-w-[1200px]">
+          <div className="flex-col justify-between max-md:text-center items-center h-full mx-8">
+            <h1 className="text-7xl mb-8 text-[#88112B] max-lg:text-4xl max-lg:w-1/2">
               Kulinarna
               <span className="text-7xl font-medium italic line-clamp-2 max-lg:text-4xl">
                 magia Japonii
               </span>
               w Twojej dłoni
             </h1>
-            <span className="text-[#2D060E] font-medium text-lg py-8 flex-wrap">
+            <span className="text-[#2D060E] font-medium text-lg max-md:text-md w-1/3 my-8">
               Odkryj niepowtarzalną kulinarną magię Japoniiw naszej restauracji
               Sushi w Dłoń. Spróbuj naszych mistrzowsko przygotowanych sushi i
               pokebowlów, które przeniosą Cię w magiczny świat smaków.
             </span>
           </div>
-          <div className="flex justify-center w-auto">
+          <div className="hero-image-container flex mr-16 max-w-[1200px]">
             <Image
-              className="h-96 rounded-t-2xl w-auto object-cover mr-48 max-xl:mr-0"
+              className="hero-image shadow-cyan-500/50 shadow-2xl h-96 rounded-t-2xl min-w-full"
               src={Hero}
             ></Image>
           </div>
         </section>
-        <section className="bg-white w-full h-max px-24 py-24 max-xl:flex-col flex items-center">
-          <Image
-            className="object-cover rounded-b-[45px] h-max w-auto"
-            src={Exotic_Food}
-          ></Image>
-          <div className="flex-col text-center mx-8 flex items-center justify-between">
-            <h2 className="text-[#88112B] text-8xl font-medium text-center mb-12 mt-12 max-md:text-5xl">
-              Jedzenie <span className="font-normal">oraz </span> <br></br>
-              koktajle
-            </h2>
-            <span className="leading-loose text-[#2D060E] text-lg max-lg:w-full">
-              Odkryj niepowtarzalną kulinarną magię Japonii w naszej restauracji
-              Sushi w Dłoń. Spróbuj naszych mistrzowsko przygotowanych sushi i
-              pokebowlów, które przeniosą Cię w magiczny świat smaków.
-            </span>
-            <div className="mt-4">
-              <button className="bg-[#F8D9DF] mb-12 py-4 px-12 text-[#88112B] font-bold hover:cursor-pointer">
-                Poznaj nas lepiej
-              </button>
+        <section className="mt-8 mx-8 rounded-t-[45px] bg-white">
+          <div className="max-xl:flex-col flex items-center">
+            <Image
+              className="object-cover rounded-b-[45px] w-auto max-md:h-48 h-auto"
+              src={Exotic_Food}
+            ></Image>
+            <div className="flex-col text-center flex items-center justify-between">
+              <h2 className="text-[#88112B] text-8xl font-medium text-center mb-12 mt-12 max-md:text-5xl">
+                Jedzenie <span className="font-normal">oraz </span> <br></br>
+                koktajle
+              </h2>
+              <span className="leading-loose text-[#2D060E] mx-4 text-lg max-lg:w-full">
+                Odkryj niepowtarzalną kulinarną magię Japonii w naszej
+                restauracji Sushi w Dłoń. Spróbuj naszych mistrzowsko
+                przygotowanych sushi i pokebowlów, które przeniosą Cię w
+                magiczny świat smaków.
+              </span>
+              <div className="mt-4">
+                <button className="bg-[#F8D9DF] shadow-lg shadow-[#88112B] mb-8 py-4 px-12 text-[#88112B] font-bold hover:cursor-pointer">
+                  Poznaj nas lepiej
+                </button>
+              </div>
             </div>
+            <Image
+              className="object-cover rounded-t-[45px] h-max"
+              src={Coctail}
+            ></Image>
           </div>
-          <Image
-            className="object-cover rounded-t-[45px] h-max"
-            src={Coctail}
-          ></Image>
         </section>
-        <section className="bg-[#FCE8EC] w-full h-max px-24 py-24">
+        <section className="bg-[#FCE8EC] w-full h-max px-8 py-24">
           <div className="flex justify-between">
             <p className="text-[#5B0B1C] font-medium">Menu</p>
             <p className="text-[#5B0B1C] font-medium future-clicked">{text}</p>
@@ -245,7 +248,7 @@ export default function Page() {
           <div className="flex justify-between items-center mt-12 max-lg:flex-col">
             <button
               onClick={changeImageRight}
-              className="w-12 h-12 flex justify-center items-center bg-[#88112B] rounded-md hover:cursor-pointer"
+              className="w-12 h-12 flex justify-center items-center bg-[#88112B] shadow-lg shadow-[#88112B] rounded-md hover:cursor-pointer"
             >
               <AiOutlineLeft></AiOutlineLeft>
             </button>
@@ -262,7 +265,7 @@ export default function Page() {
             </div>
             <button
               onClick={changeImageLeft}
-              className="w-12 h-12 mt-12 flex justify-center items-center bg-[#88112B] rounded-md hover:cursor-pointer"
+              className="w-12 h-12 mt-12 flex justify-center items-center bg-[#88112B] shadow-lg shadow-[#88112B] rounded-md hover:cursor-pointer"
             >
               <AiOutlineRight></AiOutlineRight>
             </button>
@@ -274,12 +277,12 @@ export default function Page() {
               scelerisque euismod molestie phasellus morbi quis. Tristique nulla
               in morbi.
             </p>
-            <button className="bg-[#F8D9DF] w-64 h-16 text-[#88112B] font-bold hover:cursor-pointer">
+            <button className="bg-[#F8D9DF] shadow-lg shadow-[#88112B] w-64 h-16 text-[#88112B] font-bold hover:cursor-pointer">
               Sprawdź pełną kartę
             </button>
           </div>
         </section>
-        <section className="bg-white w-full h-max px-24 py-24 grid grid-cols-2 max-xl:grid-cols-1">
+        <section className="bg-white h-max px-16 py-24 grid grid-cols-2 max-xl:grid-cols-1">
           <div className="flex-col flex-1 w-max max-xl:w-full max-xl:flex max-xl:justify-center">
             <h2 className="text-[#88112B] text-[56px] w-1/2 max-xl:text-4xl max-xl:flex max-xl:justify-center max-xl:w-full max-xl:text-center">
               Chcesz dokonać <br></br> rezerwacji lub masz <br></br> pytania?
@@ -360,7 +363,7 @@ export default function Page() {
               </label>
             </div>
           </div>
-          <div className="flex-2 my-8">
+          <div className="flex-2">
             <h1 className="text-6xl text-[#88112B] max-xl:justify-center max-xl:flex max-xl:text-center">
               Nasze lokale
             </h1>

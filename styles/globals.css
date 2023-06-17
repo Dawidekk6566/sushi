@@ -6,9 +6,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;                                    
+  overflow: hidden;
 }
-
 
 input::placeholder {
   color: black;
@@ -16,7 +15,6 @@ input::placeholder {
   font-size: 18px;
 }
 
-input[type='checkbox']:checked {
+input[type="checkbox"]:checked {
   accent-color: white;
 }
-
