@@ -11,6 +11,14 @@ import Coctail from "../public/coctail.png";
 import Fish from "../public/fish.png";
 import Ramen from "../public/ramen.png";
 
+const Poppins = {
+  fontFamily: "Lato , sans-serif",
+};
+
+const Lato = {
+  fontFamily: "Lato, sans-serif",
+};
+
 function AiOutlineLeft(props) {
   return (
     <svg
@@ -81,8 +89,6 @@ function AiOutlineClose(props) {
   );
 }
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Page() {
   const [image, setImage] = useState("/fish.png");
   const [text, setText] = useState("1/2");
@@ -138,25 +144,40 @@ export default function Page() {
   return (
     <main className="flex min-h-screen bg-[#FCE8EC] justify-center w-screen">
       <div className="flex-col max-w-[1200px] items-center">
-        <nav className="h-16 my-8 flex justify-between w-full items-center max-w-[1200px] px-8">
+        <nav
+          style={Poppins}
+          className="h-16 my-8 flex justify-between w-full items-center px-8"
+        >
           <Image
             src={Logo}
             className="object-contain h-28 w-28 hover:cursor-pointer"
           ></Image>
-          <ul className="flex gap-12 mr-8 items-center max-lg:hidden">
-            <li className="font-bold text-[#330811] text-lg hover:cursor-pointer">
+          <ul className="flex gap-12 mr-8 items-center max-lg:hidden main-navbar">
+            <li
+              className="relative transition-all duration-200 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1.5 before:rounded-full
+             before:opacity-0 before:transition-all before:duration-300 before:bg-[#88112B] hover:before:w-full hover:before:opacity-100 font-bold text-[#330811] text-lg hover:cursor-pointer"
+            >
               O nas
             </li>
-            <li className="font-bold text-[#330811] text-lg hover:cursor-pointer">
+            <li
+              className="relative transition-all duration-200 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1.5 before:rounded-full
+             before:opacity-0 before:transition-all before:duration-300 before:bg-[#88112B] hover:before:w-full hover:before:opacity-100 font-bold text-[#330811] text-lg hover:cursor-pointer"
+            >
               Menu
             </li>
-            <li className="font-bold text-[#330811] text-lg hover:cursor-pointer">
+            <li
+              className="relative transition-all duration-200 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1.5 before:rounded-full
+             before:opacity-0 before:transition-all before:duration-300 before:bg-[#88112B] hover:before:w-full hover:before:opacity-100 font-bold text-[#330811] text-lg hover:cursor-pointer"
+            >
               Promocje
             </li>
-            <li className="font-bold text-[#330811] text-lg hover:cursor-pointer">
+            <li
+              className="relative transition-all duration-200 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1.5 before:rounded-full
+             before:opacity-0 before:transition-all before:duration-300 before:bg-[#88112B] hover:before:w-full hover:before:opacity-100 font-bold text-[#330811] text-lg hover:cursor-pointer"
+            >
               Kontakt
             </li>
-            <button className="bg-white outline-none py-[10px] px-[48px] font-bold text-[#330811] shadow-md shadow-black/80 text-lg">
+            <button className="bg-white active:scale-75 hover:ease-in-out hover:bg-[#F8D9DF] hover:duration-300 outline-none py-[10px] px-[48px] font-bold text-[#330811] text-lg">
               Zamów
             </button>
           </ul>
@@ -189,66 +210,92 @@ export default function Page() {
             </ul>
           </div>
         </nav>
-        <section className="h-max flex max-md:flex-col w-screen max-w-[1200px]">
-          <div className="flex-col justify-between max-md:text-center items-center h-full mx-8 my-8">
-            <h1 className="text-7xl mb-8 h-full text-[#88112B] max-lg:text-4xl max-md:m-auto">
-              Kulinarna
-              <span className="text-7xl font-medium italic line-clamp-2 max-lg:text-4xl">
-                magia Japonii
-              </span>
-              w Twojej dłoni
-            </h1>
-            <span className="text-[#2D060E] font-medium text-lg max-md:text-md w-auto my-8">
-              Odkryj niepowtarzalną kulinarną magię Japoniiw naszej restauracji
-              Sushi w Dłoń. Spróbuj naszych mistrzowsko przygotowanych sushi i
-              pokebowlów, które przeniosą Cię w magiczny świat smaków.
-            </span>
-          </div>
-          <div className="hero-image-container flex mr-16 max-w-[1200px] max-md:m-auto max-md:px-8">
-            <Image
-              className="hero-image shadow-cyan-500/50 shadow-2xl h-96 rounded-t-2xl min-w-full mr-72"
-              src={Hero}
-            ></Image>
-          </div>
-        </section>
-        <section className="mt-8 mx-8 rounded-t-[45px] bg-white">
-          <div className="max-xl:flex-col flex items-center">
-            <Image
-              className="object-cover rounded-b-[45px] h-max"
-              src={Exotic_Food}
-            ></Image>
-            <div className="flex-col text-center flex items-center justify-between">
-              <h2 className="text-[#88112B] text-8xl font-medium text-center mb-12 mt-12 max-md:text-5xl">
-                Jedzenie <span className="font-normal">oraz </span> <br></br>
-                koktajle
-              </h2>
-              <span className="leading-loose text-[#2D060E] mx-4 text-lg">
-                Odkryj niepowtarzalną kulinarną magię Japonii w naszej
+        <div>
+          <section className="flex max-md:flex-col hero-section relative w-full h-full overflow-hidden m-auto">
+            <div className="flex-col justify-between max-md:text-center items-center h-full mx-8 my-8">
+              <h1
+                style={Poppins}
+                className="text-7xl mb-8 h-full text-[#88112B] max-lg:text-4xl max-md:m-auto leading-loose"
+              >
+                Kulinarna
+                <span className="text-7xl font-medium italic line-clamp-2 pb-2 max-lg:text-4xl">
+                  magia Japonii
+                </span>
+                w Twojej dłoni
+              </h1>
+              <span
+                style={Poppins}
+                className="text-[#2D060E] text-lg max-md:text-md w-auto my-8"
+              >
+                Odkryj niepowtarzalną kulinarną magię Japoniiw naszej
                 restauracji Sushi w Dłoń. Spróbuj naszych mistrzowsko
                 przygotowanych sushi i pokebowlów, które przeniosą Cię w
                 magiczny świat smaków.
               </span>
-              <div className="mt-4">
-                <button className="bg-[#F8D9DF] shadow-lg shadow-[#88112B] mb-8 py-4 px-12 text-[#88112B] font-bold hover:cursor-pointer">
-                  Poznaj nas lepiej
-                </button>
-              </div>
             </div>
-            <Image
-              className="object-cover rounded-t-[45px] h-max"
-              src={Coctail}
-            ></Image>
-          </div>
-        </section>
+            <div className="relative hero-image-container flex mr-16 max-w-[1200px] max-md:m-auto max-md:px-8">
+              <Image
+                className="h-auto max-w-[550px] max-xl:w-[400px] hero-image rounded-t-2xl object-cover"
+                src={Hero}
+              ></Image>
+            </div>
+          </section>
+          <section className="flex justify-center pt-64 pb-28 mx-8 bg-[#FFF2F5] relative">
+            <div className="max-xl:flex-col flex items-center">
+              <Image
+                className="object-cover rounded-b-[45px] h-max"
+                src={Exotic_Food}
+              ></Image>
+              <div className="flex-col text-center flex items-center justify-between">
+                <h2
+                  style={Lato}
+                  className="text-[#88112B] text-8xl font-extrabold text-center mb-12 mt-12 max-md:text-5xl"
+                >
+                  Jedzenie <span className="font-normal">oraz </span> <br></br>
+                  koktajle
+                </h2>
+                <span
+                  style={Poppins}
+                  className="leading-loose text-[#2D060E] mx-4 text-lg"
+                >
+                  Odkryj niepowtarzalną kulinarną magię Japonii w naszej
+                  restauracji Sushi w Dłoń. Spróbuj naszych mistrzowsko
+                  przygotowanych sushi i pokebowlów, które przeniosą Cię w
+                  magiczny świat smaków.
+                </span>
+                <div className="mt-4">
+                  <button
+                    style={Poppins}
+                    className="bg-[#F8D9DF] active:scale-75 hover:ease-in-out hover:bg-[#ffedf1] hover:duration-300 mb-8 py-4 px-12 text-[#88112B] font-bold hover:cursor-pointer"
+                  >
+                    Poznaj nas lepiej
+                  </button>
+                </div>
+              </div>
+              <Image
+                className="object-cover rounded-t-[45px] h-max"
+                src={Coctail}
+              ></Image>
+            </div>
+          </section>
+        </div>
+
         <section className="bg-[#FCE8EC] w-full h-max px-8 py-24">
-          <div className="flex justify-between">
-            <p className="text-[#5B0B1C] font-medium">Menu</p>
-            <p className="text-[#5B0B1C] font-medium future-clicked">{text}</p>
+          <div className="flex justify-between w-full">
+            <p style={Poppins} className="text-[#5B0B1C] font-normal">
+              Menu
+            </p>
+            <p
+              style={Poppins}
+              className="text-[#5B0B1C] font-medium future-clicked"
+            >
+              {text}
+            </p>
           </div>
-          <div className="flex justify-between items-center mt-12 max-lg:flex-col">
+          <div className="flex justify-between items-center mt-12 max-lg:flex-col mr-8">
             <button
               onClick={changeImageRight}
-              className="w-12 h-12 flex justify-center items-center bg-[#88112B] shadow-lg shadow-[#88112B] rounded-md hover:cursor-pointer"
+              className="w-12 h-12 flex justify-center items-center bg-[#88112B] rounded-md active:scale-75 hover:cursor-pointer"
             >
               <AiOutlineLeft></AiOutlineLeft>
             </button>
@@ -259,37 +306,50 @@ export default function Page() {
                 width={600}
                 height={600}
               ></Image>
-              <h1 className="absolute z-20 max-lg:text-center left-[4rem] top-14 font-bold text-[#88112B]/90 leading-none text-[9rem] max-lg:text-[5rem]">
+              <h1
+                style={Lato}
+                className="absolute z-20 max-lg:text-center left-[4rem] top-14 font-bold text-[#88112B]/90 leading-none text-[9rem] max-lg:text-[5rem]"
+              >
                 {header}
               </h1>
             </div>
             <button
               onClick={changeImageLeft}
-              className="w-12 h-12 mt-12 flex justify-center items-center bg-[#88112B] shadow-lg shadow-[#88112B] rounded-md hover:cursor-pointer"
+              className="w-12 h-12 mt-12 flex justify-center items-center bg-[#88112B] rounded-md active:scale-75 hover:cursor-pointer"
             >
               <AiOutlineRight></AiOutlineRight>
             </button>
           </div>
-          <div className="flex justify-between items-center max-lg:flex-col max-lg:items-center my-4">
-            <p className="mx-[4rem] text-center w-[60%] my-8 max-lg:w-full max-lg:text-center text-[#88112B] font-medium text-xl">
+          <div className="flex justify-between items-center max-lg:flex-col max-lg:items-center my-4 mr-8">
+            <p
+              style={Poppins}
+              className="mx-[4rem] text-center w-[60%] my-8 max-lg:w-full max-lg:text-center text-[#88112B] font-medium text-xl"
+            >
               Lorem ipsum dolor sit amet consectetur. Eget sit diam accumsan
               tortor tempor ornare sed ullamcorper viverra. Netus purus urna
               scelerisque euismod molestie phasellus morbi quis. Tristique nulla
               in morbi.
             </p>
-            <button className="bg-[#F8D9DF] shadow-lg shadow-[#88112B] w-64 h-16 text-[#88112B] font-bold hover:cursor-pointer">
+            <button
+              style={Poppins}
+              className="bg-[#F8D9DF] active:scale-75 hover:ease-in-out hover:bg-[#ffedf1] hover:duration-300 w-64 h-16 text-[#88112B] font-bold hover:cursor-pointer"
+            >
               Sprawdź pełną kartę
             </button>
           </div>
         </section>
-        <section className="bg-white h-max px-16 py-24 grid grid-cols-2 max-xl:grid-cols-1">
+        <section className="bg-white h-max px-8 py-24 grid grid-cols-2 max-xl:grid-cols-1">
           <div className="flex-col flex-1 w-max max-xl:w-full max-xl:flex max-xl:justify-center">
-            <h2 className="text-[#88112B] text-[56px] w-1/2 max-xl:text-4xl max-xl:flex max-xl:justify-center max-xl:w-full max-xl:text-center">
+            <h2
+              style={Lato}
+              className="text-[#88112B] text-[56px] w-1/2 max-xl:text-4xl max-xl:flex max-xl:justify-center max-xl:w-full max-xl:text-center"
+            >
               Chcesz dokonać <br></br> rezerwacji lub masz <br></br> pytania?
               Napisz do nas
             </h2>
             <div className="flex-col flex my-8 max-xl:items-center">
               <label
+                style={Poppins}
                 className="text-xs max-xl:w-auto w-1/2 font-bold flex-col uppercase py-4 px-6 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
                 htmlFor="text"
               >
@@ -301,6 +361,7 @@ export default function Page() {
                 />
               </label>
               <label
+                style={Poppins}
                 className="text-xs max-xl:w-auto w-1/2 h-full font-bold flex-col uppercase py-4 px-6 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
                 htmlFor="text"
               >
@@ -312,6 +373,7 @@ export default function Page() {
                 />
               </label>
               <label
+                style={Poppins}
                 className="text-xs font-bold flex-col uppercase py-4 px-6 max-xl:w-auto w-1/2 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
                 htmlFor="text"
               >
@@ -323,17 +385,19 @@ export default function Page() {
                 />
               </label>
               <label
-                className="py-12 text-xs font-bold flex-col uppercase px-6 max-xl:w-auto w-1/2 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
+                style={Poppins}
+                className="pb-16 pt-4 text-xs font-bold flex-col uppercase px-6 max-xl:w-auto w-1/2 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
                 htmlFor="text"
               >
                 Treśc wiadomości
                 <input
-                  className="bg-transparent w-full h-auto outline-none border-none mt-4 font-bold text-lg relative"
+                  className="bg-transparent w-full h-full outline-none border-none mt-4 font-bold text-lg"
                   type="text"
                   placeholder="Wpisz tutaj treść wiadomości"
                 />
               </label>
               <label
+                style={Poppins}
                 className="flex w-1/2 max-lg:w-full items-center"
                 htmlFor="text"
               >
@@ -348,10 +412,12 @@ export default function Page() {
                 </span>
               </label>
               <label
+                style={Poppins}
                 className="flex w-1/2 max-lg:w-auto mt-6 items-center"
                 htmlFor="text"
               >
                 <input
+                  style={Poppins}
                   className="h-6 w-6 mr-6 bg-transparent outline-none"
                   type="checkbox"
                 />
@@ -362,47 +428,88 @@ export default function Page() {
                 </span>
               </label>
             </div>
+            <div className="flex justify-end w-1/2 max-xl:w-full max-xl:justify-center">
+              <button
+                style={Poppins}
+                className="bg-[#F9CED7] active:scale-75 hover:ease-in-out hover:bg-[#ffedf1] hover:duration-300 rounded-[15px] py-[10px] px-12 max-w-40 w-40 font-bold text-lg"
+              >
+                Wyślij
+              </button>
+            </div>
           </div>
-          <div className="flex-2">
-            <h1 className="text-6xl text-[#88112B] max-xl:justify-center max-xl:flex max-xl:text-center">
+          <div className="flex-2 -ml-12 max-md:ml-0">
+            <h1
+              style={Lato}
+              className="text-6xl font-extrabold text-[#88112B] max-xl:justify-center max-xl:flex max-xl:text-center"
+            >
               Nasze lokale
             </h1>
-            <div className="flex justify-between w-auto my-8 max-xl:flex-col max-xl:items-center max-xl:text-center">
+            <div className="flex w-full justify-between my-8 max-xl:flex-col max-xl:items-center max-xl:text-center">
               <div className="mb-16 max-xl:mb-8">
-                <p className="text-3xl text-[#5B0B1C]">Sushi dłoń Górna</p>
-                <span className="text-sm">+48 000 000 000</span>
+                <p style={Lato} className="text-3xl font-light text-[#5B0B1C]">
+                  Sushi dłoń Górna
+                </p>
+                <span style={Poppins} className="text-sm font-normal">
+                  +48 000 000 000
+                </span>
                 <br></br>
-                <span className="text-sm">Aleja Kosciuszki 22,</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  Aleja Kosciuszki 22,
+                </span>
                 <br></br>
-                <span className="text-sm">Łódź 90-419</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  Łódź 90-419
+                </span>
               </div>
               <div>
-                <p className="text-3xl text-[#5B0B1C]">
+                <p style={Lato} className="text-3xl text-[#5B0B1C]">
                   Sushi dłoń Śródmieście
                 </p>
-                <span className="text-sm">+48 000 000 000</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  +48 000 000 000
+                </span>
                 <br></br>
-                <span className="text-sm">Aleja Kosciuszki 22,</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  Aleja Kosciuszki 22,
+                </span>
                 <br></br>
-                <span className="text-sm">Łódź 90-419</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  Łódź 90-419
+                </span>
               </div>
             </div>
             <div className="flex justify-between my-8 max-xl:flex-col max-xl:items-center max-xl:text-center">
-              <div>
-                <p className="text-3xl text-[#5B0B1C]">Sushi dłoń Teofilów</p>
-                <span className="text-sm">+48 000 000 000</span>
+              <div className="max-xl:mb-8">
+                <p style={Lato} className="text-3xl text-[#5B0B1C]">
+                  Sushi dłoń Teofilów
+                </p>
+                <span style={Poppins} className="text-sm font-normal">
+                  +48 000 000 000
+                </span>
                 <br></br>
-                <span className="text-sm">Aleja Kosciuszki 22,</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  Aleja Kosciuszki 22,
+                </span>
                 <br></br>
-                <span className="text-sm">Łódź 90-419</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  Łódź 90-419
+                </span>
               </div>
-              <div className="ml-6">
-                <p className="text-3xl text-[#5B0B1C]">Sushi dłoń Centrum</p>
-                <span className="text-sm">+48 000 000 000</span>
+              <div className="m-auto">
+                <p style={Lato} className="text-3xl text-[#5B0B1C]">
+                  Sushi dłoń Centrum
+                </p>
+                <span style={Poppins} className="text-sm font-normal">
+                  +48 000 000 000
+                </span>
                 <br></br>
-                <span className="text-sm">Aleja Kosciuszki 22,</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  Aleja Kosciuszki 22,
+                </span>
                 <br></br>
-                <span className="text-sm">Łódź 90-419</span>
+                <span style={Poppins} className="text-sm font-normal">
+                  Łódź 90-419
+                </span>
               </div>
             </div>
             <iframe
@@ -414,7 +521,7 @@ export default function Page() {
           </div>
         </section>
         <footer className="h-16 w-full bg-[#F8D9DF] flex justify-center items-center">
-          <p className="text-[#88112B] text-sm">
+          <p style={Poppins} className="text-[#88112B] text-sm">
             Wszystkie prawa zastrzeżone <span className="font-bold">(c)</span>{" "}
             2023
           </p>
