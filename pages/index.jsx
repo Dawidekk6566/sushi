@@ -140,7 +140,7 @@ export default function Page() {
       <div className="flex-col items-center">
         <nav
           style={Poppins}
-          className="h-16 my-8 flex justify-between w-full items-center px-8"
+          className="h-16 my-8 flex justify-between w-full items-center m-auto px-8 max-w-[1200px]"
         >
           <Image
             src="/Logo.png"
@@ -238,25 +238,25 @@ export default function Page() {
               ></Image>
             </div>
           </section>
-          <section className="pt-64 pb-28 bg-[#FFF2F5]">
+          <section className="pt-64 pb-28 bg-[#FFF2F5] w-full flex justify-center">
             <div className="max-xl:flex-col flex items-center max-w-[1200px] m-auto px-8">
               <Image
-                className="object-cover rounded-b-[45px] h-max"
+                className="object-cover rounded-b-[45px] h-[45rem]"
                 src={"/exotic-food.png"}
                 width={363}
-                height={668}
+                height={700}
               ></Image>
-              <div className="flex-col text-center flex items-center justify-between">
+              <div className="flex-col text-center flex items-center justify-between mx-4 h-max">
                 <h2
                   style={Lato}
-                  className="text-[#88112B] text-8xl font-extrabold text-center mb-12 mt-12 max-md:text-5xl"
+                  className="text-[#88112B] leading-[135%] text-8xl font-extrabold text-center mb-11 mt-12 max-md:text-5xl"
                 >
                   Jedzenie <span className="font-normal">oraz </span> <br></br>
                   koktajle
                 </h2>
                 <span
                   style={Poppins}
-                  className="leading-loose text-[#2D060E] mx-4 text-lg"
+                  className="leading-loose text-[#2D060ED9]/85 mx-4 text-lg mb-11"
                 >
                   Odkryj niepowtarzalną kulinarną magię Japonii w naszej
                   restauracji Sushi w Dłoń. Spróbuj naszych mistrzowsko
@@ -273,7 +273,7 @@ export default function Page() {
                 </div>
               </div>
               <Image
-                className="object-cover rounded-t-[45px] h-max"
+                className="object-cover rounded-t-[45px] h-[45rem]"
                 src={"/coctail.png"}
                 width={376}
                 height={668}
@@ -307,7 +307,7 @@ export default function Page() {
               ></Image>
               <h1
                 style={Lato}
-                className="absolute z-20 max-lg:text-center left-[4rem] top-14 font-bold text-[#88112B]/90 leading-none text-[9rem] max-lg:text-[5rem]"
+                className="absolute inline-block flex-col gap-x-16 max-lg:text-center left-[4rem] top-14 font-bold text-[#88112B]/90 leading-none text-[10rem] max-lg:text-[5rem]"
               >
                 {header}
               </h1>
@@ -345,10 +345,16 @@ export default function Page() {
               height={400}
               className="w-full relative max-md:h-96 object-cover rounded-t-[55px]"
             ></Image>
-            <h1 style={Lato} className="absolute mt-[18rem] left-[30%] font-bold text-[#88112B]/90 flex-wrap text-[9rem] max-lg:text-[5rem]">
+            <h1
+              style={Lato}
+              className="absolute mt-[18rem] left-[30%] font-bold text-[#88112B]/90 flex-wrap text-[9rem] max-lg:text-[5rem]"
+            >
               Nasza <br></br> historia
             </h1>
-            <span style={Poppins} className="leading-[180%] text-lg text-[#88112B] text-center mt-48 mx-16">
+            <span
+              style={Poppins}
+              className="leading-[180%] text-lg text-[#88112B] text-center mt-48 mx-16"
+            >
               Lorem ipsum dolor sit amet consectetur. Tincidunt platea viverra
               maecenas ridiculus <br></br> eget nunc at. Purus nisi ullamcorper
               massa quis tortor a. Enim mollis eu justo sed <br></br> blandit.
@@ -360,7 +366,7 @@ export default function Page() {
               vulputate magna viverra nec neque nec.
             </span>
           </div>
-          <div className="flex mt-24 gap-[2rem] w-full justify-center px-8 max-xl:flex-col max-xl:items-center">
+          <div className="flex mt-24 gap-[2rem] w-full justify-center max-xl:flex-col max-xl:items-center">
             <Image
               src="/wraps-2.png"
               className="object-cover rounded-[42px]"
@@ -381,10 +387,16 @@ export default function Page() {
             ></Image>
           </div>
           <div className="w-full h-full flex justify-between items-center max-xl:flex-col">
-            <h2 style={Lato} className="text-[#88112B] font-bold text-[10rem] max-lg:text-[5rem]">
+            <h2
+              style={Lato}
+              className="text-[#88112B] font-bold text-[10rem] max-lg:text-[5rem]"
+            >
               Rolki <br></br> w dłoń
             </h2>
-            <span style={Poppins} className="w-1/2 max-md:w-full pl-16 text-xl leading-[180%] text-[#88112B]">
+            <span
+              style={Poppins}
+              className="w-1/2 max-md:w-full pl-16 text-xl leading-[180%] text-[#88112B]"
+            >
               Lorem ipsum dolor sit amet consectetur. Tincidunt platea viverra
               maecenas ridiculus eget nunc at. Purus nisi ullamcorper massa quis
               tortor a. Enim mollis eu justo sed blandit. Semper luctus nunc
@@ -396,8 +408,8 @@ export default function Page() {
             </span>
           </div>
         </section>
-        <section className="bg-white px-8 h-max py-24 grid grid-cols-2 max-xl:grid-cols-1">
-          <div className="flex-col flex-1 max-xl:w-full max-xl:flex max-xl:justify-center max-w-[1200px]">
+        <section className="bg-white w-screen h-max py-24 grid grid-cols-2 max-xl:grid-cols-1">
+          <div className="flex-col flex-1 max-xl:w-full max-xl:flex max-xl:justify-center max-w-[1200px] mx-24">
             <h2
               style={Lato}
               className="text-[#88112B] text-[56px] w-max max-xl:text-4xl max-xl:flex max-xl:justify-center max-xl:w-full max-xl:text-center"
