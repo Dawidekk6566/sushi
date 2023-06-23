@@ -1,13 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { Inter } from "next/font/google";
 import Lenis from "@studio-freight/lenis";
-
-import Logo from "../public/Logo.png";
-import Hero from "../public/hero-image.png";
-import Exotic_Food from "../public/exotic-food.png";
-import Coctail from "../public/coctail.png";
 import Fish from "../public/fish.png";
 import Ramen from "../public/ramen.png";
 
@@ -142,17 +136,19 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="flex min-h-screen bg-[#FCE8EC] justify-center w-screen">
-      <div className="flex-col max-w-[1200px] items-center">
+    <main className="flex justify-center">
+      <div className="flex-col items-center">
         <nav
           style={Poppins}
           className="h-16 my-8 flex justify-between w-full items-center px-8"
         >
           <Image
-            src={Logo}
-            className="object-contain h-28 w-28 hover:cursor-pointer"
+            src="/Logo.png"
+            width={112}
+            height={112}
+            className="object-contain hover:cursor-pointer"
           ></Image>
-          <ul className="flex gap-12 mr-8 items-center max-lg:hidden main-navbar">
+          <ul className="flex gap-12 mr-8 items-center max-lg:hidden">
             <li
               className="relative transition-all duration-200 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1.5 before:rounded-full
              before:opacity-0 before:transition-all before:duration-300 before:bg-[#88112B] hover:before:w-full hover:before:opacity-100 font-bold text-[#330811] text-lg hover:cursor-pointer"
@@ -211,8 +207,8 @@ export default function Page() {
           </div>
         </nav>
         <div>
-          <section className="flex max-md:flex-col hero-section relative w-full h-full overflow-hidden m-auto">
-            <div className="flex-col justify-between max-md:text-center items-center h-full mx-8 my-8">
+          <section className="flex max-md:flex-col w-full h-full overflow-hidden m-auto max-w-[1200px]">
+            <div className="flex-col justify-between max-md:text-center items-center h-full my-8 mx-8">
               <h1
                 style={Poppins}
                 className="text-7xl mb-8 h-full text-[#88112B] max-lg:text-4xl max-md:m-auto leading-loose"
@@ -233,18 +229,22 @@ export default function Page() {
                 magiczny świat smaków.
               </span>
             </div>
-            <div className="relative hero-image-container flex mr-16 max-w-[1200px] max-md:m-auto max-md:px-8">
+            <div className="flex mr-16 max-w-[1200px] max-md:m-auto max-md:px-8">
               <Image
                 className="h-auto max-w-[550px] max-xl:w-[400px] hero-image rounded-t-2xl object-cover"
-                src={Hero}
+                src={"/hero-image.png"}
+                width={550}
+                height={400}
               ></Image>
             </div>
           </section>
-          <section className="flex justify-center pt-64 pb-28 mx-8 bg-[#FFF2F5] relative">
-            <div className="max-xl:flex-col flex items-center">
+          <section className="pt-64 pb-28 bg-[#FFF2F5]">
+            <div className="max-xl:flex-col flex items-center max-w-[1200px] m-auto px-8">
               <Image
                 className="object-cover rounded-b-[45px] h-max"
-                src={Exotic_Food}
+                src={"/exotic-food.png"}
+                width={363}
+                height={668}
               ></Image>
               <div className="flex-col text-center flex items-center justify-between">
                 <h2
@@ -274,21 +274,20 @@ export default function Page() {
               </div>
               <Image
                 className="object-cover rounded-t-[45px] h-max"
-                src={Coctail}
+                src={"/coctail.png"}
+                width={376}
+                height={668}
               ></Image>
             </div>
           </section>
         </div>
 
-        <section className="bg-[#FCE8EC] w-full h-max px-8 py-24">
+        <section className="bg-[#FCE8EC] w-full h-max px-8 py-24 max-w-[1200px] m-auto">
           <div className="flex justify-between w-full">
             <p style={Poppins} className="text-[#5B0B1C] font-normal">
               Menu
             </p>
-            <p
-              style={Poppins}
-              className="text-[#5B0B1C] font-medium future-clicked"
-            >
+            <p style={Poppins} className="text-[#5B0B1C] font-medium">
               {text}
             </p>
           </div>
@@ -320,7 +319,7 @@ export default function Page() {
               <AiOutlineRight></AiOutlineRight>
             </button>
           </div>
-          <div className="flex justify-between items-center max-lg:flex-col max-lg:items-center my-4 mr-8">
+          <div className="flex justify-between items-center max-lg:flex-col max-lg:items-center my-4 mr-8 max-lg:m-auto">
             <p
               style={Poppins}
               className="mx-[4rem] text-center w-[60%] my-8 max-lg:w-full max-lg:text-center text-[#88112B] font-medium text-xl"
@@ -338,11 +337,70 @@ export default function Page() {
             </button>
           </div>
         </section>
-        <section className="bg-white h-max px-8 py-24 grid grid-cols-2 max-xl:grid-cols-1">
-          <div className="flex-col flex-1 w-max max-xl:w-full max-xl:flex max-xl:justify-center">
+        <section className="bg-[#FCE8EC] w-full px-8 py-24 max-w-[1200px] m-auto">
+          <div className="flex w-full relative flex-col">
+            <Image
+              src="/wraps.png"
+              width={1200}
+              height={400}
+              className="w-full relative max-md:h-96 object-cover rounded-t-[55px]"
+            ></Image>
+            <h1 style={Lato} className="absolute mt-[18rem] left-[30%] font-bold text-[#88112B]/90 flex-wrap text-[9rem] max-lg:text-[5rem]">
+              Nasza <br></br> historia
+            </h1>
+            <span style={Poppins} className="leading-[180%] text-lg text-[#88112B] text-center mt-48 mx-16">
+              Lorem ipsum dolor sit amet consectetur. Tincidunt platea viverra
+              maecenas ridiculus <br></br> eget nunc at. Purus nisi ullamcorper
+              massa quis tortor a. Enim mollis eu justo sed <br></br> blandit.
+              Semper luctus nunc nunc integer. Eros vitae tristique massa
+              lectus. Nunc congue <br></br>
+              fermentum amet turpis mi aliquam. Non proin quis adipiscing
+              viverra neque <br></br> cras. Augue turpis integer <br></br>{" "}
+              fringilla imperdiet tellus amet at libero. Tincidunt integer
+              vulputate magna viverra nec neque nec.
+            </span>
+          </div>
+          <div className="flex mt-24 gap-[2rem] w-full justify-center px-8 max-xl:flex-col max-xl:items-center">
+            <Image
+              src="/wraps-2.png"
+              className="object-cover rounded-[42px]"
+              width={400}
+              height={600}
+            ></Image>
+            <Image
+              src="/wraps.png"
+              className="object-cover rounded-[42px]"
+              width={400}
+              height={600}
+            ></Image>
+            <Image
+              src="/salad.png"
+              className="object-cover rounded-[42px]"
+              width={400}
+              height={600}
+            ></Image>
+          </div>
+          <div className="w-full h-full flex justify-between items-center max-xl:flex-col">
+            <h2 style={Lato} className="text-[#88112B] font-bold text-[10rem] max-lg:text-[5rem]">
+              Rolki <br></br> w dłoń
+            </h2>
+            <span style={Poppins} className="w-1/2 max-md:w-full pl-16 text-xl leading-[180%] text-[#88112B]">
+              Lorem ipsum dolor sit amet consectetur. Tincidunt platea viverra
+              maecenas ridiculus eget nunc at. Purus nisi ullamcorper massa quis
+              tortor a. Enim mollis eu justo sed blandit. Semper luctus nunc
+              nunc integer. Eros vitae tristique massa lectus. Nunc congue
+              fermentum amet turpis mi aliquam. Non proin quis adipiscing
+              viverra neque cras. Augue turpis integer fringilla imperdiet
+              tellus amet at libero. Tincidunt integer vulputate magna viverra
+              nec neque nec.
+            </span>
+          </div>
+        </section>
+        <section className="bg-white px-8 h-max py-24 grid grid-cols-2 max-xl:grid-cols-1">
+          <div className="flex-col flex-1 max-xl:w-full max-xl:flex max-xl:justify-center max-w-[1200px]">
             <h2
               style={Lato}
-              className="text-[#88112B] text-[56px] w-1/2 max-xl:text-4xl max-xl:flex max-xl:justify-center max-xl:w-full max-xl:text-center"
+              className="text-[#88112B] text-[56px] w-max max-xl:text-4xl max-xl:flex max-xl:justify-center max-xl:w-full max-xl:text-center"
             >
               Chcesz dokonać <br></br> rezerwacji lub masz <br></br> pytania?
               Napisz do nas
@@ -350,7 +408,7 @@ export default function Page() {
             <div className="flex-col flex my-8 max-xl:items-center">
               <label
                 style={Poppins}
-                className="text-xs max-xl:w-auto w-1/2 font-bold flex-col uppercase py-4 px-6 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
+                className="text-xs w-96 max-xl:w-auto font-bold flex-col uppercase py-4 px-6 border-none outline-none mb-4 rounded-md bg-[#FCE8ED]"
                 htmlFor="text"
               >
                 Imię i nazwisko
@@ -362,7 +420,7 @@ export default function Page() {
               </label>
               <label
                 style={Poppins}
-                className="text-xs max-xl:w-auto w-1/2 h-full font-bold flex-col uppercase py-4 px-6 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
+                className="text-xs w-96 max-xl:w-auto font-bold flex-col uppercase py-4 px-6 border-none outline-none mb-4 rounded-md bg-[#FCE8ED]"
                 htmlFor="text"
               >
                 Adres E-mail
@@ -374,7 +432,7 @@ export default function Page() {
               </label>
               <label
                 style={Poppins}
-                className="text-xs font-bold flex-col uppercase py-4 px-6 max-xl:w-auto w-1/2 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
+                className="text-xs font-bold flex-col uppercase py-4 px-6 max-xl:w-auto w-96 border-none outline-none mb-4 rounded-md bg-[#FCE8ED]"
                 htmlFor="text"
               >
                 Temat wiadomości
@@ -386,7 +444,7 @@ export default function Page() {
               </label>
               <label
                 style={Poppins}
-                className="pb-16 pt-4 text-xs font-bold flex-col uppercase px-6 max-xl:w-auto w-1/2 border-none outline-none mb-4 rounded-md bg-[#FCE8ED] input-name"
+                className="pb-16 pt-4 text-xs font-bold flex-col uppercase px-6 max-xl:w-auto w-96 border-none outline-none mb-4 rounded-md bg-[#FCE8ED]"
                 htmlFor="text"
               >
                 Treśc wiadomości
@@ -398,10 +456,11 @@ export default function Page() {
               </label>
               <label
                 style={Poppins}
-                className="flex w-1/2 max-lg:w-full items-center"
+                className="flex max-lg:w-auto mt-6 items-center"
                 htmlFor="text"
               >
                 <input
+                  style={Poppins}
                   className="h-6 w-6 mr-6 bg-transparent outline-none"
                   type="checkbox"
                 />
@@ -413,7 +472,7 @@ export default function Page() {
               </label>
               <label
                 style={Poppins}
-                className="flex w-1/2 max-lg:w-auto mt-6 items-center"
+                className="flex max-lg:w-auto mt-6 items-center"
                 htmlFor="text"
               >
                 <input
@@ -428,7 +487,7 @@ export default function Page() {
                 </span>
               </label>
             </div>
-            <div className="flex justify-end w-1/2 max-xl:w-full max-xl:justify-center">
+            <div className="flex w-1/2 justify-end max-xl:w-full max-xl:justify-center">
               <button
                 style={Poppins}
                 className="bg-[#F9CED7] active:scale-75 hover:ease-in-out hover:bg-[#ffedf1] hover:duration-300 rounded-[15px] py-[10px] px-12 max-w-40 w-40 font-bold text-lg"
@@ -437,7 +496,7 @@ export default function Page() {
               </button>
             </div>
           </div>
-          <div className="flex-2 -ml-12 max-md:ml-0">
+          <div className="flex-2 max-md:ml-0 pt-16 max-w-[1200px] mx-8">
             <h1
               style={Lato}
               className="text-6xl font-extrabold text-[#88112B] max-xl:justify-center max-xl:flex max-xl:text-center"

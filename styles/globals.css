@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  background-color: #FCE8EC;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,10 +18,4 @@ input::placeholder {
 
 input[type="checkbox"]:checked {
   accent-color: white;
-}
-
-#hero-section::before {
-  content: "";
-  display: block;
-  padding: 100%;
 }
