@@ -14,7 +14,7 @@ const History = () => {
     "<span class='float-left'>Funky</span> <span class='float-right'>Sushi</span>"
   );
   return (
-    <section className="bg-[#FCE8EC] w-full px-8 py-24 max-w-[1200px] m-auto">
+    <section className="bg-[#FCE8EC] w-full px-8 py-24 max-w-[1200px] m-auto hidden">
       <div className="flex w-full relative flex-col">
         <Image
           src="/wraps.png"

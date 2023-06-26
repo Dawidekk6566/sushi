@@ -2,13 +2,19 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
-
   const [nav, setNav] = useState(true);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
+  const Poppins = {
+    fontFamily: "Lato , sans-serif",
+  };
+
+  const Lato = {
+    fontFamily: "Lato, sans-serif",
+  };
 
   function FiMenu(props) {
     return (
@@ -46,16 +52,14 @@ const Navbar = () => {
     );
   }
   return (
-    <nav
-      className="h-16 my-8 flex justify-between w-full items-center m-auto px-8 max-w-[1200px]"
-    >
+    <nav className="h-16 my-8 flex justify-between w-full items-center m-auto px-8 max-w-[1200px]">
       <Image
         src="/Logo.png"
         width={112}
         height={112}
         className="object-contain hover:cursor-pointer"
       ></Image>
-      <ul className="flex gap-12 mr-8 items-center max-lg:hidden">
+      <ul style={Poppins} className="flex gap-12 mr-8 items-center max-lg:hidden leading-[150%]">
         <li
           className="relative transition-all duration-200 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1.5 before:rounded-full
              before:opacity-0 before:transition-all before:duration-300 before:bg-[#88112B] hover:before:w-full hover:before:opacity-100 font-bold text-[#330811] text-lg hover:cursor-pointer"
@@ -80,7 +84,7 @@ const Navbar = () => {
         >
           Kontakt
         </li>
-        <button className="bg-white active:scale-75 hover:ease-in-out hover:bg-[#F8D9DF] hover:duration-300 outline-none py-[10px] px-[48px] font-bold text-[#330811] text-lg">
+        <button className="bg-white leading-[150%] active:scale-75 hover:ease-in-out hover:bg-[#F8D9DF] hover:duration-300 outline-none py-[10px] px-[48px] font-bold text-[#0C0C0C] text-lg">
           Zamów
         </button>
       </ul>

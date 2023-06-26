@@ -38,7 +38,7 @@ export default function Page() {
 
   return (
     
-    <main className="flex justify-center">
+    <main className="flex w-screen">
       <div className="flex-col items-center">
         <Navbar />
         <Hero />

@@ -108,7 +108,7 @@ const Slider = () => {
       <div className="flex justify-between items-center max-lg:flex-col max-lg:items-center my-4 mr-8 max-lg:m-auto">
         <p
           style={Poppins}
-          className="mx-[4rem] text-center w-[60%] my-8 max-lg:w-full max-lg:text-center text-[#88112B] font-medium text-xl"
+          className="mx-[4rem] w-[60%] my-8 max-lg:w-full max-lg:text-center text-[#88112B] font-medium text-xl"
         >
           Lorem ipsum dolor sit amet consectetur. Eget sit diam accumsan tortor
           tempor ornare sed ullamcorper viverra. Netus purus urna scelerisque
