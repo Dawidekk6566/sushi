@@ -235,12 +235,15 @@ const Contact = () => {
             </span>
           </div>
         </div>
-        <div className="max-lg:w-screen max-lg:flex max-lg:justify-center">
+        <div className="max-lg:w-full max-lg:flex max-lg:justify-center">
           <iframe
-            className="mt-20 rounded-xl object-cover max-xl:flex max-xl:justify-center max-lg:w-[90%]"
             src="https://my.atlist.com/map/bae7198f-9d20-4c6d-b0af-7c1c9fbc85e3?share=true"
+            allow="geolocation 'self' https://my.atlist.com"
             width="100%"
             height="400px"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen
           ></iframe>
         </div>
       </div>

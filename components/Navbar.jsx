@@ -57,7 +57,7 @@ const Navbar = () => {
         src="/Logo.png"
         width={112}
         height={112}
-        className="object-contain hover:cursor-pointer"
+        className="object-contain hover:cursor-pointer ml-8"
       ></Image>
       <ul style={Poppins} className="flex gap-12 mr-8 items-center max-lg:hidden leading-[150%]">
         <li

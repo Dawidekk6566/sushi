@@ -11,9 +11,9 @@ import Slider from "@/components/Slider";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import History from "@/components/History";
+import AdvMenu from "@/components/AdvMenu";
 
 export default function Page() {
-
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -37,14 +37,14 @@ export default function Page() {
   }, []);
 
   return (
-    
-    <main className="flex w-screen">
-      <div className="flex-col items-center">
+    <main className="flex">
+      <div className="flex-col items-center sm:min-w-screen sm:w-full">
         <Navbar />
         <Hero />
-        <About /> 
+        <About />
         <Slider />
         <History />
+        <AdvMenu />
         <Contact />
         <Footer />
       </div>
