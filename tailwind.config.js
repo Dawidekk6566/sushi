@@ -6,7 +6,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'slider-header-color': 'rgba(136, 17, 43, 0.8)',
+      },
+    },
   },
   plugins: [],
 }

@@ -37,7 +37,7 @@ const About = () => {
           <div className="">
             <button
               style={Poppins}
-              className="bg-[#F8D9DF] active:scale-75 hover:ease-in-out hover:bg-[#ffedf1] hover:duration-300 mb-8 py-4 px-12 text-[#88112B] font-bold hover:cursor-pointer"
+              className="bg-[#F8D9DF] active:scale-75 hover:ease-in-out hover:duration-500 transition-colors hover:bg-[#88112B] hover:text-white mb-8 py-4 px-12 text-[#88112B] font-bold hover:cursor-pointer"
             >
               Poznaj nas lepiej
             </button>

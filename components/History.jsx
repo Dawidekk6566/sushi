@@ -5,7 +5,7 @@ const History = () => {
   const Poppins = {
     fontFamily: "Lato , sans-serif",
   };
- 
+
   const Lato = {
     fontFamily: "Lato, sans-serif",
   };
@@ -24,27 +24,27 @@ const History = () => {
         ></Image>
         <h1
           style={Lato}
-          className="xl:absolute block text-center max-lg:text-center left-1/4 top-1/3 font-bold text-[#88112B]/90 leading-none text-[10rem] max-lg:text-[5rem]"
+          className="xl:absolute block text-center max-lg:text-center left-1/4 top-1/3 font-bold text-[#88112B] leading-none text-[10rem] max-lg:text-[5rem]"
         >
           <span class="max-xl:float-right top-48 max-lg:top-16 max-lg:left-12 left-32 xl:absolute">
             historia
-          </span>{" "}
+          </span>
           <span class="max-xl:float-left">Nasza</span>
         </h1>
-        <span
-          style={Poppins}
-          className="leading-[180%] text-lg text-[#88112B] text-center mt-24 mx-16"
-        >
-          Lorem ipsum dolor sit amet consectetur. Tincidunt platea viverra
-          maecenas ridiculus <br></br> eget nunc at. Purus nisi ullamcorper
-          massa quis tortor a. Enim mollis eu justo sed <br></br> blandit.
-          Semper luctus nunc nunc integer. Eros vitae tristique massa lectus.
-          Nunc congue <br></br>
-          fermentum amet turpis mi aliquam. Non proin quis adipiscing viverra
-          neque <br></br> cras. Augue turpis integer <br></br> fringilla
-          imperdiet tellus amet at libero. Tincidunt integer vulputate magna
-          viverra nec neque nec.
-        </span>
+        <div className="w-full flex justify-center">
+          <span
+            style={Poppins}
+            className="leading-[180%] text-lg text-[#88112B] text-center mt-24 mx-16 max-w-[45rem]"
+          >
+            Lorem ipsum dolor sit amet consectetur. Tincidunt platea viverra
+            maecenas ridiculus eget nunc at. Purus nisi ullamcorper massa quis
+            tortor a. Enim mollis eu justo sed blandit. Semper luctus nunc nunc
+            integer. Eros vitae tristique massa lectus. Nunc congue fermentum
+            amet turpis mi aliquam. Non proin quis adipiscing viverra neque
+            cras. Augue turpis integer fringilla imperdiet tellus amet at
+            libero. Tincidunt integer vulputate magna viverra nec neque nec.
+          </span>
+        </div>
       </div>
       <div className="flex mt-24 gap-[2rem] w-full justify-center max-xl:flex-col max-xl:items-center">
         <Image
@@ -101,7 +101,10 @@ const History = () => {
         >
           Rozbudowa menu
         </h2>
-        <span style={Poppins} className="text-[#88112B] leading-[180%] ml-[3.5rem]">
+        <span
+          style={Poppins}
+          className="text-[#88112B] leading-[180%] ml-[3.5rem]"
+        >
           Lorem ipsum dolor sit amet consectetur. Tincidunt platea viverra
           maecenas ridiculus eget nunc at. Purus nisi ullamcorper massa quis
           tortor a. Enim mollis eu justo sed blandit. Semper luctus nunc nunc
@@ -111,13 +114,14 @@ const History = () => {
           integer vulputate magna viverra nec neque nec.
         </span>
       </div>
-      <Image className="w-full mt-[4.5rem] object-cover rounded-b-[55px]"
-      src="/dania.png"
-      width={0}
-      height={0}
-      sizes="100vw"
-      style={{ height: "45rem" }}>
-      </Image>
+      <Image
+        className="w-full mt-[4.5rem] object-cover rounded-b-[55px]"
+        src="/dania.png"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ height: "45rem" }}
+      ></Image>
     </section>
   );
 };

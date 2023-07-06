@@ -10,6 +10,10 @@ body {
   overflow-x: hidden;
 }
 
+#slider-header {
+  color: rgba(136, 17, 43, 1);
+}
+
 input::placeholder {
   color: black;
   font-weight: 700;

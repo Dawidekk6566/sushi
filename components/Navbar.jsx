@@ -84,7 +84,7 @@ const Navbar = () => {
         >
           Kontakt
         </li>
-        <button className="bg-white leading-[150%] active:scale-75 hover:ease-in-out hover:bg-[#F8D9DF] hover:duration-300 outline-none py-[10px] px-[48px] font-bold text-[#0C0C0C] text-lg">
+        <button className="leading-[150%] bg-white hover:bg-[#88112B] hover:text-white transition-colors hover:duration-500 text-[#0C0C0C] font-bold hover:cursor-pointer py-[10px] px-[48px] text-lg">
           Zamów
         </button>
       </ul>

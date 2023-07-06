@@ -94,7 +94,7 @@ const Slider = () => {
           ></Image>
           <h1
             style={Lato}
-            className="absolute inline-block flex-col gap-x-16 max-lg:text-center left-0 top-14 font-bold text-[#88112B]/90 leading-none text-[10rem] max-lg:text-[5rem]"
+            className="slider-header text-slider-header-color italic absolute inline-block flex-col gap-x-16 max-lg:text-center left-0 top-14 font-bold leading-none text-[10rem] max-lg:text-[5rem]"
             dangerouslySetInnerHTML={{ __html: header }}
           ></h1>
         </div>
@@ -108,7 +108,7 @@ const Slider = () => {
       <div className="flex justify-between items-center max-lg:flex-col max-lg:items-center my-4 mr-8 max-lg:m-auto">
         <p
           style={Poppins}
-          className="mx-[4rem] w-[60%] my-8 max-lg:w-full max-lg:text-center text-[#88112B] font-medium text-xl"
+          className="mx-[4rem] w-[60%] my-8 max-lg:w-full max-lg:text-center text-[#88112B] font-medium text-lg leading-[180%]"
         >
           Lorem ipsum dolor sit amet consectetur. Eget sit diam accumsan tortor
           tempor ornare sed ullamcorper viverra. Netus purus urna scelerisque
@@ -116,7 +116,7 @@ const Slider = () => {
         </p>
         <button
           style={Poppins}
-          className="bg-[#F8D9DF] active:scale-75 hover:ease-in-out hover:bg-[#ffedf1] hover:duration-300 w-64 h-16 text-[#88112B] font-bold hover:cursor-pointer"
+          className="bg-[#F8D9DF] d w-64 h-16 text-[#88112B] font-bold hover:cursor-pointer"
         >
           Sprawdź pełną kartę
         </button>
