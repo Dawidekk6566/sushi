@@ -15,7 +15,17 @@ const History = () => {
   );
   return (
     <section className="bg-[#FCE8EC] w-full px-8 py-24 max-w-[1200px] m-auto">
-      <div className="flex w-full relative flex-col">
+      <div
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
+        className="flex w-full relative flex-col"
+      >
         <Image
           src="/wraps.png"
           width={1200}
@@ -48,18 +58,42 @@ const History = () => {
       </div>
       <div className="flex mt-24 gap-[2rem] w-full justify-center max-xl:flex-col max-xl:items-center">
         <Image
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
           src="/wraps-2.png"
           className="object-cover rounded-[42px]"
           width={400}
           height={600}
         ></Image>
         <Image
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
           src="/wraps.png"
           className="object-cover h-[600px] rounded-[42px]"
           width={400}
           height={600}
         ></Image>
         <Image
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
           src="/salad.png"
           className="object-cover rounded-[42px]"
           width={400}
@@ -68,12 +102,28 @@ const History = () => {
       </div>
       <div className="w-full h-full flex justify-between items-center max-xl:flex-col mt-16">
         <h2
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
           style={Lato}
           className="text-[#88112B] mb-16 font-bold text-[10rem] max-lg:text-[5rem]"
         >
           Rolki <br></br> w dłoń
         </h2>
         <span
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
           style={Poppins}
           className="xl:w-1/2 max-md:w-full pl-16 text-xl leading-[180%] text-[#88112B]"
         >
@@ -88,6 +138,14 @@ const History = () => {
       </div>
       <div className="mt-[9rem] w-full h-full flex max-xl:flex-col max-xl:items-center xl:items-end xl:relative">
         <Image
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
           className="h-full"
           src="/bowl.png"
           height={0}
@@ -96,12 +154,26 @@ const History = () => {
           style={{ width: "33rem", height: "42rem" }}
         ></Image>
         <h2
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
           style={Lato}
-          className="leading-[85%] 2xl:text-[13rem] text-[10rem] max-lg:text-[7rem] text-right max-xl:text-center font-bold text-[#88112B] italic xl:absolute right-0 top-24 my-16"
+          className="leading-[85%] 2xl:text-[11rem] text-[10rem] max-lg:text-[7rem] text-right max-xl:text-center font-bold text-[#88112B] italic xl:absolute right-0 top-24 my-16"
         >
           Rozbudowa menu
         </h2>
         <span
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
           style={Poppins}
           className="text-[#88112B] leading-[180%] ml-[3.5rem]"
         >
@@ -115,6 +187,14 @@ const History = () => {
         </span>
       </div>
       <Image
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
         className="w-full mt-[4.5rem] object-cover rounded-b-[55px]"
         src="/dania.png"
         width={0}

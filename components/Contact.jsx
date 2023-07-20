@@ -9,11 +9,26 @@ const Contact = () => {
   const Lato = {
     fontFamily: "Lato, sans-serif",
   };
+
+  const [active, setActive] = useState(true);
+  const handleClick = () => {
+    setActive(!active);
+  };
+
   return (
-    <div className="bg-white w-full">
-      <div className="max-w-[1200px] m-auto">
+    <div className="bg-white w-full flex justify-center">
+      <div className="max-w-[1200px]">
         <section className="h-max py-24 grid grid-cols-2 max-xl:grid-cols-1">
-          <div className="flex-col items-center flex-1 max-xl:w-full max-xl:flex max-xl:justify-center xl:mx-36">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            className="flex-col items-center flex-1 max-xl:w-full max-xl:flex max-xl:justify-center"
+          >
             <h2
               style={Lato}
               className="text-[#88112B] leading-[150%] text-[3.5rem] w-max max-xl:text-4xl max-xl:flex max-xl:justify-center max-xl:w-full max-xl:text-center"
@@ -23,15 +38,16 @@ const Contact = () => {
             </h2>
             <div className="flex-col flex my-8 max-xl:items-center">
               <label
-                style={Poppins}
-                className="text-xs leading-[150%] w-full max-xl:w-auto font-bold flex-col uppercase py-4 px-6 border-none outline-none mb-4 rounded-md bg-[#FCE8ED]"
+                onClick={handleClick}
+                style={{ backgroundColor: active ? "#FCE8ED" : "#F9CED7" }}
+                className="text-xs leading-[150%] w-full max-xl:w-auto font-bold flex-col uppercase py-4 px-6 border-none outline-none mb-4 rounded-md"
                 htmlFor="text"
               >
-                Imię i nazwisko
+                Imię i Nazwisko
                 <input
-                  className="bg-transparent outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
+                  className="dane-input bg-transparent w-full outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
                   type="text"
-                  placeholder="Wpisz Imię i Nazwisko"
+                  placeholder="Piotr Malinowski"
                 />
               </label>
               <label
@@ -41,7 +57,7 @@ const Contact = () => {
               >
                 Adres E-mail
                 <input
-                  className="bg-transparent w-full outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
+                  className="dane-input bg-transparent w-full outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
                   type="text"
                   placeholder="Wpisz adres Email"
                 />
@@ -53,7 +69,7 @@ const Contact = () => {
               >
                 Temat wiadomości
                 <input
-                  className="bg-transparent w-full outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
+                  className="dane-input bg-transparent w-full outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
                   type="text"
                   placeholder="Wpisz tutaj temat wiadomości"
                 />
@@ -65,7 +81,7 @@ const Contact = () => {
               >
                 Treśc wiadomości
                 <input
-                  className="bg-transparent w-full h-full outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
+                  className="dane-input bg-transparent w-full h-full outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
                   type="text"
                   placeholder="Wpisz tutaj treść wiadomości"
                 />
@@ -78,14 +94,14 @@ const Contact = () => {
                   className="h-6 w-6 mr-6 bg-transparent outline-none"
                   type="checkbox"
                 />
-                  <span
-                    style={Poppins}
-                    className="text-sm text-[#0C0C0C] leading-[150%]"
-                  >
-                    Lorem ipsum dolor sit amet consectetur. Ultricies sed dui
-                    ullamcorper aliquam. Blandit scelerisque faucibus id quisque
-                    tincidunt. Ullamcorper.
-                  </span>
+                <span
+                  style={Poppins}
+                  className="text-sm text-[#0C0C0C] leading-[150%]"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Ultricies sed dui
+                  ullamcorper aliquam. Blandit scelerisque faucibus id quisque
+                  tincidunt. Ullamcorper.
+                </span>
               </label>
               <label
                 className="flex mt-6 items-center max-md:flex max-lg:justify-center max-xl:w-1/2"
@@ -114,7 +130,16 @@ const Contact = () => {
               </button>
             </div>
           </div>
-          <div className="flex-2 max-lg:items-center max-lg:w-full max-lg:flex-col max-md:ml-0 pt-16 max-w-[1200px] mr-14 ml-14">
+          <div
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            className="flex-2 max-lg:items-center max-lg:w-full max-lg:flex-col max-md:ml-0 pt-16 ml-14 w-full"
+          >
             <h1
               style={Lato}
               className="text-[4rem] font-extrabold text-[#88112B] max-xl:justify-center max-xl:flex max-xl:text-center"

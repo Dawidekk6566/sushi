@@ -20,6 +20,10 @@ input::placeholder {
   font-size: 18px;
 }
 
+.dane-input:focus::placeholder {
+  color: transparent;
+}
+
 input[type="checkbox"]:checked {
   accent-color: white;
 }

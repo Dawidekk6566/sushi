@@ -69,7 +69,17 @@ const Slider = () => {
     setHeader("Ramen");
   };
   return (
-    <section className="bg-[#FCE8EC] w-full h-max px-8 py-24 max-w-[1200px] m-auto">
+    <section
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+      className="bg-[#FCE8EC] w-full h-max px-8 py-24 max-w-[1200px] m-auto"
+    >
       <div className="flex justify-between w-full">
         <p style={Poppins} className="text-[#5B0B1C] font-normal">
           Menu

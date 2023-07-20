@@ -54,12 +54,31 @@ const Navbar = () => {
   return (
     <nav className="h-16 my-8 flex justify-between w-full items-center m-auto px-8 max-w-[1200px]">
       <Image
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
         src="/Logo.png"
         width={112}
         height={112}
         className="object-contain hover:cursor-pointer ml-8"
       ></Image>
-      <ul style={Poppins} className="flex gap-12 mr-8 items-center max-lg:hidden leading-[150%]">
+      <ul
+      data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+        style={Poppins}
+        className="flex gap-12 mr-8 items-center max-lg:hidden leading-[150%]"
+      >
         <li
           className="relative transition-all duration-200 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1.5 before:rounded-full
              before:opacity-0 before:transition-all before:duration-300 before:bg-[#88112B] hover:before:w-full hover:before:opacity-100 font-bold text-[#330811] text-lg hover:cursor-pointer"
