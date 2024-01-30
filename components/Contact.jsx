@@ -47,7 +47,7 @@ const Contact = () => {
                 <input
                   className="dane-input bg-transparent w-full outline-none border-none mt-4 text-[#0C0C0C] font-bold text-lg"
                   type="text"
-                  placeholder="Piotr Malinowski"
+                  placeholder="Jan Kowalski"
                 />
               </label>
               <label
